@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>WaterAid News Feed</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery-jvectormap-1.1.1.css" type="text/css" media="screen"/>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap-transition.js"></script>
+    <script src="js/bootstrap-alert.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-scrollspy.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/bootstrap-popover.js"></script>
+    <script src="js/bootstrap-button.js"></script>
+    <script src="js/bootstrap-collapse.js"></script>
+    <script src="js/bootstrap-carousel.js"></script>
+    <script src="js/bootstrap-typeahead.js"></script>
+    <script src="js/jquery-jvectormap-1.1.1.min.js"></script>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <!-- <link rel="shortcut icon" href="../assets/ico/favicon.ico"> -->
+    <!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png"> -->
+    <!-- <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png"> -->
+    <!-- <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png"> -->
+    <!-- <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png"> -->
+
+ <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+ google.load('visualization', '1.0', {'packages':['corechart', 'geochart', 'GeoChart']});
+      google.setOnLoadCallback(drawVisualization);
+function drawVisualization() {
+  var data = google.visualization.arrayToDataTable([
+    ['Country', 'Percentage without sanitation'],
+    ['Burkina Faso', 87],
+    ['Mali', 55],
+    ['Sierra Leone', 89],
+    ['Liberia', 68],
+    ['Niger', 93],
+    ['Nigeria', 70],
+    ['Ghana', 90],
+    ['Ethiopia', 89],
+    ['Uganda', 67],
+    ['Rwanda', 77],
+    ['Angola', 50],
+    ['Zambia', 48],
+    ['Lesotho', 64],
+    ['Kenya', 58],
+    ['Tanzania', 67],
+    ['Malawi', 40],
+    ['Madagascar', 88],
+    ['Mozambique', 69],
+    ['Swaziland', 50],
+    ['Pakistan', 42],
+    ['India', 72],
+    ['Nepal', 73],
+    ['Bangladesh', 64],
+    ['Laos', 52],
+    ['Papua New Guinea', 55],
+    ['Timor Leste', 59],
+    ['Laos', 52]]);
+
+
+  var geochart = new google.visualization.GeoChart(
+      document.getElementById('visualization'));
+  geochart.draw(data, {width: 800, height: 500});
+}
+</script>
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+    <script type="text/javascript" src="js/jquery.gfeed.js"></script> 
+    
+    <script type="text/javascript"> 
+  // when the DOM is ready, convert the feed anchors into feed content 
+    $(document).ready(function() { 
+        $('a.feed').gFeed( { target: '#feeds', tabs: true } ); 
+    }); 
+    </script> 
+
+    <!-- <script type="text/javascript"> -->
+
+    <!-- google.load("feeds", "1"); -->
+
+    <!-- function initialize() { -->
+    <!--   var feed = new google.feeds.Feed("http://feeds.feedburner.com/WateraidNews"); -->
+    <!--   feed.load(function(result) { -->
+    <!--     if (!result.error) { -->
+    <!--       var container = document.getElementById("feed"); -->
+    <!--       for (var i = 0; i < result.feed.entries.length; i++) { -->
+    <!--         var entry = result.feed.entries[i]; -->
+    <!--         var div = document.createElement("div"); -->
+    <!--         div.appendChild(entry.content); -->
+    <!--         container.appendChild(div); -->
+    <!--       } -->
+    <!--     } -->
+    <!--   }); -->
+    <!-- } -->
+    <!-- google.setOnLoadCallback(initialize); -->
+
+    <!-- </script> -->
+
+
+
+  </head>
+
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <!-- <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> -->
+          <!--   <span class="icon-bar"></span> -->
+          <!--   <span class="icon-bar"></span> -->
+          <!--   <span class="icon-bar"></span> -->
+          <!-- </a> -->
+          <a class="brand"><img src="img/resized_WATERAID_COL_LOGO.JPG" alt="WaterAid" height="2"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>Featured Images:</h2>
+
+    <div id="myCarousel" class="carousel slide">                           
+    <!-- Carousel items -->                                                
+    <div class="carousel-inner">                                           
+      <div align="center" class="item active">                             
+                <img src="img/resized_GH26_231.JPG" alt="">                
+                    <div class="carousel-caption">                         
+                      <h4>Atoapoka Azuma, Upper East region, Ghana</h4>    
+                      <p>"With the time I save now that we have the pump close by, I weave baskets to sell."</p>                                     
+                    </div>                                                 
+                                                                           
+      </div>                                                               
+    <div align="center" class="item">                                      
+                <img src="img/crop_NP33_264.JPG" alt="">                   
+                    <div class="carousel-caption">                         
+                      <h4>Piplegaun village, Nepal</h4>                    
+                      <p>100% water, 100% sanitation.</p>                  
+                    </div>                                                 
+</div>                                                                     
+    <div align="center" class="item">                                      
+                <img src="img/crop_PNG1_038.JPG" alt="">                   
+                    <div class="carousel-caption">                         
+                      <h4>Kombagora village, Papua New Guinea</h4>         
+                      <p>Village mapping process which is done with community members as part of the community consultation process.</p>             
+                    </div>                                                 
+    </div>                                                                 
+    <div align="center" class="item">                                      
+                <img src="img/crop_TIM1_033.JPG" alt="">                   
+                    <div class="carousel-caption">                         
+                      <h4>Camalelara, Timor Leste</h4>                     
+                      <p>Gabriel de Silva on the half kilometer hike for water.</p>                                                                  
+                    </div>                                                 
+    </div>                                                                 
+    </div>   
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>                                                               
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>                                                              
+    </div>
+
+    <h2>Where we work:</h2>
+    <div id="visualization"></div>
+
+    <h2>Recent News:</h2>
+    <div id="feeds"> 
+    <a class="feed" href="http://feeds.feedburner.com/WateraidNews">WaterAid News</a> 
+    </div> 
+
+
+      <!-- Example row of columns -->
+      <div class="hero-unit">
+        
+          <h2>WaterAid – water and sanitation for all.</h2>
+          <p> WaterAid transforms lives by improving access to safe water, hygiene and sanitation in the world’s poorest communities.<br> WaterAid, 47-49 Durham Street, London, SE11 5JD, UK <br> www.wateraid.org <br> +44 (0)20 7793 4500 <br>Registered charity numbers 288701 (England and Wales) and SC039479 (Scotland)  </p>
+          <p><a class="btn" href="#">Donate! &raquo;</a></p>
+        
+      
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>&copy; WaterAid 2012</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+  </body>
+</html>
